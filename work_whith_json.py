@@ -1,15 +1,15 @@
 import json
 
-import db
+from config import name_file
 
 
 def read():
-    with open(db.name_file, 'r') as file:
+    with open(name_file, 'r') as file:
         return json.load(file)
 
 
 def write(dic):
-    with open(db.name_file, 'w') as file:
+    with open(name_file, 'w') as file:
         json.dump(dic, file, indent=4)
         file.close()
 

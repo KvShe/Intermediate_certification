@@ -1,3 +1,6 @@
 from controller import main
 
-main()
+try:
+    main()
+except:
+    print('Приложение завершило работу с ошибкой')
